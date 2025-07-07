@@ -1,0 +1,65 @@
+/* Basic style for floor plan */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f0f0f0;
+    padding: 20px;
+}
+
+.floor-plan {
+    position: relative;
+    width: 1000px;        /* 10m */
+    height: 800px;        /* 8m */
+    margin: 0 auto;
+    border: 20px solid #a0522d; /* 20cm brick thickness */
+    box-sizing: border-box;
+    background: #fff;
+}
+
+.wall {
+    position: absolute;
+    background: #a0522d;
+    z-index: 2;
+}
+
+.label {
+    position: absolute;
+    font-size: 14px;
+    background: rgba(255,255,255,0.8);
+    padding: 2px 4px;
+}
+/* Internal walls */
+.vertical {
+    width: 20px;          /* 20cm wall */
+    height: 760px;        /* interior height */
+    top: 0;
+    left: 580px;          /* 5.8m from left outer wall */
+}
+
+.horizontal {
+    width: 360px;         /* width of right column minus wall thickness */
+    height: 20px;
+    top: 300px;           /* 3m from top */
+    left: 580px;          /* aligned with vertical wall */
+}
+
+.room-label {
+    font-weight: bold;
+}
+
+.measure {
+    position: absolute;
+    font-size: 12px;
+    color: #000;
+}
+
+.measure.horizontal {
+    border-top: 1px dashed #000;
+    width: 100%;
+    left: 0;
+}
+
+.measure.vertical {
+    border-left: 1px dashed #000;
+    height: 100%;
+    top: 0;
+}
